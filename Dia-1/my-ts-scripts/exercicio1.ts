@@ -57,4 +57,22 @@ const validateEmailFormat = (param: string): boolean => {
   return re.test(param);
 };
 
-console.log(validateEmailFormat(emailInput))
+console.log(validateEmailFormat(emailInput));
+
+/*// Essa função recebe uma lista e ordena seu conteúdo de forma crescente.
+
+const numberList = [10, 5, 18, 2, 8, 23];
+
+const sortInput = (param) => {
+  return param.sort(function(a, b){return a-b});
+};
+
+console.log(sortInput(numberList));*/
+
+const numberList: Array<number> = [10, 5, 18, 2, 8, 23];
+
+const sortInput = (param: typeof numberList): typeof numberList => {
+  return param.sort(function (a: number, b: number) { return a - b });
+};
+
+console.log(sortInput(numberList));
